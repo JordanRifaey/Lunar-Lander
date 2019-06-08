@@ -17,7 +17,7 @@ public class Player extends Entity {
     private long nextUpdate;
     private long updateDelay = 30;
     public int fuel = 1000;
-    private Music rocketSound;
+    private Sound rocketSound;
     private boolean rocketPlaying;
 
     public Player(World world) {
@@ -27,7 +27,6 @@ public class Player extends Entity {
         fixtureDef.shape = shape;
         body.createFixture(fixtureDef).setUserData(this);
         rocketSound = manager.get(rocket);
-        rocketSound.setLooping(true);
         //sprite = new Sprite(texture, 81, 22, 9, 10);
         //sprite.setOrigin(0f,0f);
         //body.setTransform(new Vector2(30, 0), body.getAngle());
